@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+}
+.logoo img {
+  width: 300px;
+  height: auto;
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  color: rgb(255, 255, 255);
+  box-shadow: #ffffff;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  transition: all 0.42s ease;
+}
+.navbar a:hover {
+  color: yellow;
+}
+.navIcon {
+  display: flex;
+  align-items: center;
+}
+.navIcon i {
+  /* padding-left: 10px; */
+  margin-right: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+.navIcon i:hover {
+  transform: scale(1.1);
+  color: yellow;
+}
+
+.appointmentButton {
+  display: inline-block;
+  background-color: rgb(255, 255, 255); /* Button background color */
+  color: rgb(0, 0, 0); /* Button text color */
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 8px 12px; /* Button size */
+  border-radius: 6px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  text-decoration: none; /* Remove underline */
+}
+
+.appointmentButton:hover {
+  background-color: yellow;
+  color: rgb(0, 0, 0); /* Text color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  cursor: pointer;
+}
+
+.logoutButton {
+  /* padding-left: 20px; */
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+
+.logoutButton c:hover {
+  transform: scale(1.1);
+  color: yellow;
+}
+
+header.sticky .navbar a {
+  color: black; /* Text color changes to black when sticky */
+}
+
+header.sticky .navIcon.logoutButton c {
+  color: #111;
+}
+
+#menuIcon {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  z-index: 10001;
+  cursor: pointer;
+}
+/*    --------------------------------------- BELOW NAVBAR SECTION   -----------------------------------      */
+section {
+  padding: 5% 10%;
+  background: linear-gradient(to bottom, #fff4d7, #fff);
+}
+
+.page-section {
+  background: linear-gradient(to bottom, #fff4d7, #fff);
+}
+
+.mainHome {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  text-align: left;
+}
+.mainText h5 {
+  color: yellow;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add shadow effect */
+}
+.mainText h1 {
+  color: white;
+  font-size: 65px;
+  text-transform: capitalize;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 6px 0 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add shadow effect */
+}
+.mainText p {
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add shadow effect */
+}
+.mainBtn {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 2px solid #fff;
+  padding: 12px 25px;
+  transition: all 0.42s ease;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add shadow effect */
+}
+.mainBtn:hover {
+  background-color: #fff;
+  color: #111;
+}
+.mainBtn i {
+  vertical-align: middle;
+}
+.downArrow {
+  position: absolute;
+  top: 85%;
+  right: 11%;
+}
+.down i {
+  font-size: 30px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 12px 12px;
+}
+.down i:hover {
+  background-color: #fff;
+  color: #111;
+  transition: all 0.42s ease;
+}
+header.sticky {
+  background: #ffffff;
+  padding: 20px 10%;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* NEWS SECTION */
+
+.locationNews {
+  background-color: #043272;
+}
+.topCenterText h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 60px;
+  margin-top: -60px;
+}
+.locUpdate img {
+  width: 380px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.locationUpdate {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, auto));
+  gap: 1rem;
+}
+.locUpdate h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE CSS */
+@media (max-width: 890px) {
+  header {
+    padding: 20px 3%;
+    transition: 0.4s;
+  }
+}
+@media (max-width: 630px) {
+  .mainText h1 {
+    font-size: 50px;
+    transition: 0.4s;
+  }
+  .mainText p {
+    font-size: 18px;
+    transition: 0.4s;
+  }
+  .mainBtn {
+    padding: 10px 20px;
+    transition: 0.4s;
+  }
+}
+@media (max-width: 750px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 300px;
+    height: 130vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 30px;
+    transition: all 0.42s;
+  }
+  .navbar a {
+    display: block;
+    margin: 18px 0;
+  }
+  .navbar.open {
+    right: 0;
+  }
+}
+
+/*          bg upload           */
+
+/* Basic styling for upload form */
+.uploadSection {
+  margin: 50px;
+  text-align: center;
+}
+
+.uploadSection input[type="file"] {
+  margin: 10px;
+}
+
+.uploadBtn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Homepage background styling */
+.mainHome {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 0 10%;
+  text-align: left;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+  /* background-color: #f1f1f1; */
+  color: #333;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropbtn:hover {
+  background-color: #ddd;
+}
+
+/* Dropdown content - initially hidden */
+.dropdown-content {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li {
+  list-style-type: none;
+  padding: 8px 12px;
+}
+
+.dropdown-content li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown when hovering over the parent element */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btnLogout a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px;
+  text-transform: capitalize;
+  background-color: #ffc70b;
+  border-radius: 6px; /* Optional: rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.btnLogout a:hover {
+  background-color: #ddd; /* Change background on hover */
+  color: black; /* Change text color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.promotion .card:hover {
+  transform: translateY(-10px);
+}
+
+.topPromotion {
+  background: linear-gradient(to bottom, #fff4d7, #fff);
+}
+.promotion {
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center; /* Center the container vertically */
+  height: auto; /* Make the container take full viewport height */
+  flex-direction: column; /* Stack the items vertically */
+  gap: 20px; /* Add space between each card */
+}
+
+.promotion .card-container {
+  display: flex; /* Use flexbox for the cards container */
+  flex-direction: column-reverse; /* Stack the cards vertically */
+  align-items: center; /* Center the cards horizontally within the container */
+  gap: 20px; /* Add space between cards */
+}
+
+.promotion .card {
+  width: 100%; /* Adjust width of each card to fit the screen */
+  max-width: 600px; /* Limit the maximum width of the card */
+  height: auto;
+  border-radius: 6px; /* Border radius for rounded corners */
+  overflow: hidden; /* Ensures images are clipped to the card's border */
+  transition: transform 0.3s ease;
+}
+
+.promotion .card img {
+  width: 100%; /* Ensures the image takes full width of the card */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Ensures the image behaves like a block element */
+  margin: 20px auto 0 auto; /* Adds space above the image, moves it down */
+  border: 2px solid #ccc; /* Border around the image */
+  border-radius: 6px; /* Rounded corners for the image */
+}
